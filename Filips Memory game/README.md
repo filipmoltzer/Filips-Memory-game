@@ -1,16 +1,13 @@
 # Memory Game Project
+This classical memory game was created in vanilla JavaScript.
+The goal is to find and match all 16 cards as fast as possible, with the possibilty to choose two cards on every try.
+When finished a popup window appears and shows rating and total time spent.
 
 ## Table of Contents
-
 * [Instructions](#instructions)
-* [Contributing](#contributing)
 
 ## Instructions
+1. Download the whole directory. 
+2. Open the "index.html" file on your optional browser.
+3. Exercise your brain and memory! 🥳
 
-This is a Memory game were you choose two cards every try.
-The goal is to find and match all 16 cards as fast as possible.
-When finished a popup window appears and shows your star rating and total time.
-
-## Contributing
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).

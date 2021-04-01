@@ -29,12 +29,10 @@ function init() {
 
 // Shuffle the cards
 shuffle(icons);
-
 /*
  * Click event
  */
 
-// checks if its the first time clicked
 let isFirstClick = true;
 
 function click(card) {
@@ -64,9 +62,7 @@ function click(card) {
             // Then Compares the 2 cards
             compare(currentCard, previousCard);
 
-
             // Don't have any open card yet
-
         } else {
             card.classList.add("open", "show", "disable");
             openedCards.push(this);
@@ -112,8 +108,8 @@ function compare(currentCard, previousCard) {
 function isOver() {
     if (matchedCards.length === icons.length) {
         // Ends the timer
-        var endTime = document.getElementById('ENDTIME');
-        var lastStars = document.getElementById('starRating');
+        let endTime = document.getElementById('ENDTIME');
+        let lastStars = document.getElementById('starRating');
 
         const lastTime = totalSeconds + 's';
         stopTimer();
@@ -137,7 +133,6 @@ function addMove() {
     rating();
 }
 
-
 /*
  * Stars rating
  */
@@ -154,7 +149,6 @@ function rating() {
         starsContainer.innerHTML = star;
     }
 }
-
 
 /*
  * Timer
@@ -179,13 +173,9 @@ function startTimer() {
     }, 1000);
 }
 
-/// Our timer do not stop until we call stopTimer
-
 function stopTimer() {
     clearInterval(liveTimer);
 }
-
-
 
 /*
  * Restart Game function
@@ -198,6 +188,8 @@ restartButton.addEventListener("click", function() {
     //reset moves
     moves = 0;
     movesContainer.innerHTML = moves;
+    // Empty the opened cards
+    openedCards[0];
     // reset stars to 3
     starsContainer.innerHTML = star + star + star;
     // call shuffle function
@@ -213,15 +205,9 @@ restartButton.addEventListener("click", function() {
     timerContainer.innerHTML = totalSeconds + "s";
 });
 
-/// start the game
-init();
-
-
-
-
-// Shuffle function from http://stackoverflow.com/a/2450976
+// Shuffle function from
 function shuffle(array) {
-    var currentIndex = array.length,
+    let currentIndex = array.length,
         temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
@@ -235,11 +221,8 @@ function shuffle(array) {
     return array;
 }
 
-
-
-
 // Get the modal
-var modal = document.getElementById('myModal');
+let modal = document.getElementById('myModal');
 // When the users done, the modal opens
 popUp = function() {
     modal.style.display = "block";
@@ -248,3 +231,6 @@ popUp = function() {
 function reLoad() {
     location.reload();
 }
+
+// start the game
+init();
